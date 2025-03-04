@@ -1,0 +1,20 @@
+<h1>All Customers</h1>
+<div class="card" style="max-width: 400px; margin: 10px;">
+  <div class="card-content">
+    <div class="media">
+      <h2><%= customer.full_name %></h2><br>
+      <div class="media-image">
+        <figure class="image is-64x64">
+          <%= image_tag url_for(customer.image), alt: "#{customer.full_name}'s Image", class: "is-rounded" %>
+        </figure>
+      </div>
+    </div>
+
+    <div class="content">
+        <p><strong>Province:</p> <%= customer.province %><br><br>
+        <%= customer.phone_number %><br><br>
+        <%= customer.email %><br><br>
+        <%= customer.notes %>
+    </div>
+  </div>
+</div>
